@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
 import { BasicIcons } from '@/assets/BasicIcons';
 
+
 // Components
 import FeatCommon from '@/components/common/FeatCommon';
 import AvatarWrapper from '@/components/common/AvatarWrapper';
@@ -134,7 +135,7 @@ const Lobby = ({ params }: { params: { roomId: string } }) => {
         <div className='flex items-center w-full flex-col'>
           <div className='flex flex-col justify-center w-full gap-1'>
             Set a display name
-            <div className='flex w-full items-center rounded-[10px] border px-3 text-slate-300 outline-none border-zinc-800 backdrop-blur-[400px] focus-within:border-slate-600 gap-'>
+            <div className='flex w-full items-center rounded-[10px] border px-3 text-slate-300 outline-none border-custom-9 backdrop-blur-[400px] focus-within:border-slate-600 gap-'>
               <div className='mr-2'>
                 <Image
                   alt='user-icon'
@@ -158,10 +159,10 @@ const Lobby = ({ params }: { params: { roomId: string } }) => {
         </div>
         <div className='flex items-center w-full'>
           <button
-            className='flex items-center justify-center bg-[#246BFD] text-slate-100 rounded-md p-2 mt-2 w-full'
+            className='bg-custom-6 flex items-center justify-center text-lobby rounded-md p-2 mt-2 w-full'
             onClick={handleStartSpaces}
           >
-            {isJoining ? 'Joining Spaces...' : 'Start Spaces'}
+            {isJoining ? 'Joining Spaces...' : 'Start Audio Space'}
             {!isJoining && (
               <Image
                 alt='narrow-right'
